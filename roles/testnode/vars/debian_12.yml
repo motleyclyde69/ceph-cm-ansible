@@ -1,0 +1,97 @@
+---
+packages:
+  - lsb-release
+  - build-essential
+  - sysstat
+  - gdb
+  - python3-configobj
+  - python3-gevent
+  - python3-dev
+  - python3-virtualenv
+  - libev-dev
+  - fuse
+#  - libssl1.0.0
+  - libgoogle-perftools4
+  - cryptsetup-bin
+  - libcrypto++9
+  - iozone3
+  - docker.io
+  - collectl
+  - nfs-kernel-server
+  # for running ceph
+  - libedit2
+  - xfsprogs
+  - gdisk
+  - parted
+  ###
+  # for setting BIOS settings 
+  - libsmbios-bin
+  ###
+  - libuuid1
+  - libfcgi
+  - btrfs-tools
+  # for compiling helpers and such
+  - libatomic-ops-dev
+  ###
+  # used by workunits
+  - git-core
+  - attr
+  - dbench
+  - bonnie++
+  - valgrind
+  - python3-nose
+  - mpich2
+  - libmpich2-dev
+  - ant
+  ###
+  # used by the xfstests tasks
+  - libtool
+  - automake
+  - gettext
+  - uuid-dev
+  - libacl1-dev
+  - bc
+  - xfsdump
+  - dmapi
+  - xfslibs-dev
+  ###
+  # For Mark Nelson
+  - sysprof
+  - pdsh
+  ###
+  # for blktrace and seekwatcher
+  - blktrace
+  - python3-numpy
+  - python3-matplotlib
+  ###
+  # for qemu
+  - kvm
+  - genisoimage
+  ###
+  # for json_xs to investigate JSON by hand
+  - libjson-xs-perl
+  ###
+  # for pretty-printing xml
+  - xml-twig-tools
+  ###
+  # for java bindings, hadoop, etc.
+  - default-jdk
+  - junit4
+  ###
+  # for samba testing
+  - cifs-utils
+  ###
+  # DistCC for arm
+  - distcc
+
+#NOTE: these packages were not found for debian 8, but are present for debian 7
+#- mencoder
+#- libmpich2-3
+#- libboost-thread1.49.0
+  
+packages_to_upgrade:
+  - apt
+  - libcurl3-gnutls
+  - apache2
+  - libapache2-mod-fastcgi
+  - libfcgi0ldbl
