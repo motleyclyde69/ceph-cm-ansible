@@ -43,4 +43,6 @@
     name: "{{ no_recommended_packages|list }}"
     state: present
     install_recommends: no
-  when: no_recommended_packages|length > 0
+  when: 
+    - no_recommended_packages is defined
+    - no_recommended_packages|length > 0
