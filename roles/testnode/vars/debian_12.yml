@@ -13,7 +13,7 @@ packages:
 #  - libssl1.0.0
   - libgoogle-perftools4
   - cryptsetup-bin
-  - libcrypto++9
+  - libcrypto++8
   - iozone3
   - docker.io
   - collectl
@@ -29,7 +29,6 @@ packages:
   ###
   - libuuid1
   - libfcgi
-  - btrfs-tools
   # for compiling helpers and such
   - libatomic-ops-dev
   ###
@@ -40,8 +39,6 @@ packages:
   - bonnie++
   - valgrind
   - python3-nose
-  - mpich2
-  - libmpich2-dev
   - ant
   ###
   # used by the xfstests tasks
@@ -52,7 +49,6 @@ packages:
   - libacl1-dev
   - bc
   - xfsdump
-  - dmapi
   - xfslibs-dev
   ###
   # For Mark Nelson
@@ -65,7 +61,6 @@ packages:
   - python3-matplotlib
   ###
   # for qemu
-  - kvm
   - genisoimage
   ###
   # for json_xs to investigate JSON by hand
