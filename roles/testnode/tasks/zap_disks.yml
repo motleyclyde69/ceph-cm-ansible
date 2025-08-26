@@ -62,6 +62,8 @@
     - '"loop" not in item.key'
     - '"ram" not in item.key'
     - '"sr" not in item.key'
+    - '"vdb" not in item.key'
+    - '"vdc" not in item.key'
 
 - name: Remove all LVM data
   shell: "dmsetup remove_all --force"
