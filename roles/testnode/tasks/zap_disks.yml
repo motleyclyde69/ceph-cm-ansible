@@ -51,6 +51,8 @@
     - '"loop" not in item.key'
     - '"ram" not in item.key'
     - '"sr" not in item.key'
+    - '"vdb" not in item.key'
+    - '"vdc" not in item.key'
 
 ## See https://tracker.ceph.com/issues/22354 and
 ## https://github.com/ceph/ceph/pull/20400
