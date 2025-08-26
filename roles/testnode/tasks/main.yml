@@ -24,10 +24,10 @@
   tags:
     - hostname
 
-- name: configure ssh
-  import_tasks: ssh.yml
-  tags:
-    - ssh
+# - name: configure ssh
+#   import_tasks: ssh.yml
+#   tags:
+#     - ssh
 
 - name: configure things specific to yum systems
   import_tasks: yum_systems.yml
