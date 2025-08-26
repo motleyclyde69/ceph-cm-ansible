@@ -116,19 +116,19 @@
     - ansible_distribution_major_version != 8
 
 # configure ntp
-- import_tasks: ntp.yml
-  tags:
-    - ntp-client
-
-- name: configure pip to use our mirror
-  import_tasks: pip.yml
-  tags:
-    - pip
-
-- name: include resolv.conf setup
-  import_tasks: resolvconf.yml
-  tags:
-    - resolvconf
+#- import_tasks: ntp.yml
+#  tags:
+#    - ntp-client
+#
+#- name: configure pip to use our mirror
+#  import_tasks: pip.yml
+#  tags:
+#    - pip
+#
+#- name: include resolv.conf setup
+#  import_tasks: resolvconf.yml
+#  tags:
+#    - resolvconf
 
 # http://tracker.ceph.com/issues/20623
 - name: List any leftover Ceph artifacts from previous jobs
