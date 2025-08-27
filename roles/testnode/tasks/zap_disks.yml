@@ -47,6 +47,7 @@
     - '"vda" not in item.key'
     - '"vdb" not in item.key'
     - '"vdc" not in item.key'
+    - '"dm-0" not in item.key'
 
 ## See https://tracker.ceph.com/issues/22354 and
 ## https://github.com/ceph/ceph/pull/20400
@@ -61,6 +62,7 @@
     - '"vda" not in item.key'
     - '"vdb" not in item.key'
     - '"vdc" not in item.key'
+    - '"dm-0" not in item.key'
 
 #- name: Remove all LVM data
 #  shell: "dmsetup remove_all --force"
