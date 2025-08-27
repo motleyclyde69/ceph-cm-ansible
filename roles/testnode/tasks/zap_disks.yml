@@ -77,7 +77,7 @@
 
 ## See http://tracker.ceph.com/issues/21989
 - name: Check for physical volumes
-  shell: "pvdisplay | grep 'PV Name' | awk '{ print $3 }' | grep -v /dev/vda"
+  shell: "pvdisplay | grep 'PV Name' | awk '{ print $3 }' | grep -v vda"
   register: pvs_to_remove
 
 - name: Remove physical volumes
