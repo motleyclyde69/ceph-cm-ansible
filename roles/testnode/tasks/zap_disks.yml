@@ -35,13 +35,6 @@
     - item.mount != '/' and
       not item.mount is match("/(boot|home|opt|root|srv|tmp|usr/local|var|.snapshots)")
 
-## http://tracker.ceph.com/issues/20533
-## Trusty version of wipefs lacks --force option
-- name: Wipe filesystems on non-root partitions
-  shell: "wipefs --force --all /dev/{{ item }} || wipefs --all /dev/{{ item }}"
-  with_items: "{{ non_root_partitions.stdout_lines }}"
-  when: non_root_partitions|length > 0
-
 ## See https://github.com/ceph/ceph-ansible/issues/759#issue-153248281
 - name: Zap all non-root disks
   shell: "sgdisk --zap-all /dev/{{ item.key }} || sgdisk --zap-all /dev/{{ item.key }}"
@@ -84,6 +77,15 @@
 
 - name: Remove physical volumes
   shell: "pvremove --force --force --yes {{ item }}"
+  with_items: "{{ pvs_to_remove.stdout_lines }}"
+  when:
+    - pvs_to_remove is defined
+    - pvs_to_remove.stdout_lines|length > 0
+
+## http://tracker.ceph.com/issues/20533
+## Trusty version of wipefs lacks --force option
+- name: Wipe filesystems on non-root partitions
+  shell: "wipefs --force --all /dev/{{ item }} || wipefs --all /dev/{{ item }}"
   with_items: "{{ pvs_to_remove.stdout_lines }}"
   when:
     - pvs_to_remove is defined
