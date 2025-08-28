@@ -28,6 +28,7 @@ packages:
   - libsmbios-bin
   ###
   - libuuid1
+  - uuid-runtime
   - libfcgi
   # for compiling helpers and such
   - libatomic-ops-dev
